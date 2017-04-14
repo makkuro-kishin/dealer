@@ -10,4 +10,4 @@ else:
     print('Welcome to Dealer.')
 
 
-modules.controller.main()
+modules.controller.controls()

@@ -1,6 +1,5 @@
 try:
     import configparser
-    import modules.logger
     import modules.storage
     import modules.interaction
 except Exception as import_error:
@@ -12,7 +11,11 @@ def get_primary_selection():
     modules.interaction.show_primary_menu()
     primary_action = modules.interaction.get_action()
     if primary_action == '1':
-        print('TODO')
+        contacts_list = {}
+        new_contact = modules.interaction.create_new_contact()
+        contacts_list.update({new_contact[0] : new_contact[1]})
+        print('\nAdded new contact:', contacts_list)
+        get_primary_selection()
     elif primary_action == '2':
         get_secondary_selection()
     elif primary_action == '3':
@@ -38,6 +41,6 @@ def get_secondary_selection():
         get_secondary_selection()
 
 
-def main():
+def controls():
     get_primary_selection()
 

@@ -8,6 +8,17 @@ def show_secondary_menu():
     print('1) Read existing record\n', '2) Update existing record\n', '3) Delete existing record\n', '4) Exit\n', sep='')
 
 
+def create_new_contact():
+    new_contact = []
+    new_contact.append(input('\nNew contact name: '))
+    new_contact.append(input('New contact number: '))
+    return new_contact
+
+
+def find_contact():
+    pass
+
+
 def get_action():
     action = input('Selection: ')
     return action
